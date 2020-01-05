@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link href="{{ asset('bootstrap/css/clean-blog.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('bootstrap/vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+ <div class="container">
+
+
+{% block body %}
+	
+{% endblock %}
+
+{% block javascripts %}
+	<script href="{{ asset('bootstrap/js/clean-blog.min.js') }}" ></script>
+	
+{% endblock %}
+
+
+</div>
+</body>
+</html>

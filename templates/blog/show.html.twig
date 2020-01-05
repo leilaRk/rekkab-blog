@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post{% endblock %}
+
+{% block body %}
+    <h1>Post</h1>
+
+    <table class="table">
+        <tbody>
+            
+            <tr>
+                <th>Name</th>
+                <td>{{ post.Name }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ post.Content }}</td>
+            </tr>
+            
+            <tr>
+                <th>PublishingDate</th>
+                <td>{{ post.PublishingDate ? post.PublishingDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('blog') }}">back to the first page</a>
+
+   
+
+    
+{% endblock %}

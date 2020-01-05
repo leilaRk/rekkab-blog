@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome to Blog{% endblock %}
+
+{% block body %}
+	<h1>Published Posts</h1>
+	{% for post in posts %}
+    <h3>{{post.getName()}}</h3>
+    <small>published: {{ post.getPublishingDate().format('d/m/Y') }}</small>
+    <p>{{ post.getContent()|length > 50 ? post.getContent()|slice(0, 50) ~ '...' : post.getContent()  }}</p>
+    <a href="{{ path('show_post', {'id': post.id}) }}">continue reading</a>
+    {% endfor %}
+
+{% endblock %}
